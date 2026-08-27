@@ -103,3 +103,25 @@ flows:
     config:
       $ref: ./eB2B/Order_to_confirm_to_fulfillment__Prepaid_with_igm_1.0.0.yaml
 
+  # _____________Incremental_Catalog_____________
+  - type: playground
+    id: Discovery_Flow_incremental_catalog_push
+    usecase: eB2B
+    tags:
+      - WORKBENCH
+      # - MANDATORY
+      # - REPORTABLE
+    description: An eB2B incremental catalog push scenario where a buyer platform subscribes to continuous catalog updates from a distributor, receives unsolicited item, store-close, and store-reopen pushes, then unsubscribes.
+    config:
+      $ref: ./eB2B/Discovery_Flow_incremental_catalog_push.yaml
+  - type: playground
+    id: Discovery_Flow_incremental_catalog_pull
+    usecase: eB2B
+    tags:
+      - WORKBENCH
+      # - MANDATORY
+      # - REPORTABLE
+    description: An eB2B incremental catalog pull scenario where a buyer platform first fetches the full catalog, then pulls only the catalog changes that occurred within a specific time window from the distributor.
+    config:
+      $ref: ./eB2B/Discovery_Flow_incremental_catalog_pull.yaml
+
