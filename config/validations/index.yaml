@@ -887,8 +887,8 @@ _TESTS_:
             _RETURN_: attr are present
           - _NAME_: ITEMS_QUANTITY_AVAILABLE_COUNT
             attr: "$.message.catalog['bpp/providers'][*].items[*].quantity.available.count"
-            var_min: 0
-            var_max: 99
+            var_min: "0"
+            var_max: "99"
             _CONTINUE_: "!(attr are present)"
             _RETURN_: "!(attr less than var_min) && !(attr greater than var_max)"
           - _NAME_: ITEMS_QUANTITY_MAXIMUM_COUNT
@@ -1855,8 +1855,8 @@ _TESTS_:
 
           - _NAME_: ITEMS_QUANTITY_AVAILABLE_COUNT
             attr: "$.message.catalog['bpp/providers'][*].items[*].quantity.available.count"
-            var_min: 0
-            var_max: 99
+            var_min: "0"
+            var_max: "99"
             _RETURN_: "!(attr less than var_min) && !(attr greater than var_max)"
           - _NAME_: ITEMS_QUANTITY_MAXIMUM_COUNT
             attr: "$.message.catalog['bpp/providers'][*].items[*].quantity.maximum.count"
@@ -2618,8 +2618,8 @@ _TESTS_:
               - _NAME_: BREAKUP_ITEM_ITEM_QUANTITY_AVAILABLE_COUNT
                 _CONTINUE_: "!(attr are present)"
                 attr: "$.message.order.quote.breakup[*].item.quantity.available.count"
-                var_min: 0
-                var_max: 99
+                var_min: "0"
+                var_max: "99"
                 _RETURN_: "!(attr less than var_min) && !(attr greater than var_max)"
               - _NAME_: BREAKUP_ITEM_ITEM_QUANTITY_MAXIMUM_COUNT
                 _CONTINUE_: "!(attr are present)"
