@@ -162,6 +162,11 @@ steps:
                     "@ondc/org/time_to_ship": PT4H
                     "@ondc/org/available_on_cod": true
                     "@ondc/org/contact_details_consumer_care": support,support@abcdist.com,18004254444
+                    "@ondc/org/statutory_reqs_packaged_commodities":
+                      manufacturer_or_packer_name: ITC Limited
+                      manufacturer_or_packer_address: ITC Quality Care Cell, P.O Box No.592, Bangalore-560005
+                      common_or_generic_name_of_commodity: Wheat Flour (Atta)
+                      month_year_of_manufacture_packing_import: 12/2024
                     time:
                       label: enable
                       timestamp: 2025-01-08T08:05:00.000Z
@@ -237,6 +242,11 @@ steps:
                       "@ondc/org/time_to_ship": PT4H
                       "@ondc/org/available_on_cod": true
                       "@ondc/org/contact_details_consumer_care": support,support@abcdist.com,18004254444
+                      "@ondc/org/statutory_reqs_packaged_commodities":
+                        manufacturer_or_packer_name: ITC Limited
+                        manufacturer_or_packer_address: ITC Quality Care Cell, P.O Box No.592, Bangalore-560005
+                        common_or_generic_name_of_commodity: Wheat Flour (Atta)
+                        month_year_of_manufacture_packing_import: 12/2024
                       time:
                         label: enable
                         timestamp: 2026-08-27T08:05:00.000Z
