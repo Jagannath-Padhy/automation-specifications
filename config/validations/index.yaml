@@ -851,6 +851,7 @@ _TESTS_:
           
           - _NAME_: ITEMS_TIME_LABEL
             attr: "$.message.catalog['bpp/providers'][*].items[*].time.label"
+            _CONTINUE_: "!(attr are present)"
             _RETURN_: attr are present
           - _NAME_: ITEMS_TIME_TIMESTAMP
             attr: "$.message.catalog['bpp/providers'][*].items[*].time.timestamp"
@@ -888,6 +889,7 @@ _TESTS_:
           - _NAME_: ITEMS_QUANTITY_AVAILABLE_COUNT
             attr: "$.message.catalog['bpp/providers'][*].items[*].quantity.available.count"
             reg: ["^(0|[1-9][0-9]?)$"]
+            _CONTINUE_: "!(attr are present)"
             _RETURN_: attr are present && attr follow regex reg
           - _NAME_: ITEMS_QUANTITY_MAXIMUM_COUNT
             attr: "$.message.catalog['bpp/providers'][*].items[*].quantity.maximum.count"
