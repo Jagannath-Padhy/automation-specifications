@@ -4908,13 +4908,18 @@ _TESTS_:
         - _NAME_: FULFILLMENTS_ID
           attr: "$.message.order.fulfillments[*].id"
           _RETURN_: attr are present
+        # Optional on /on_update: no contract example (part-cancel or any of the 10
+        # return-lifecycle legs) carries a fulfillment-level time.timestamp — only
+        # start.time.timestamp / end.time.timestamp. Validate the format when a mock
+        # chooses to send it anyway; don't require it.
         - _NAME_: FULFILLMENTS_TIME_TIMESTAMP
           _SCOPE_: "$.message.order.fulfillments[*]"
           fulfillment_type: "$.type"
           var_delivery_type: ["Delivery"]
-          _CONTINUE_: "!(fulfillment_type any in var_delivery_type)"
           attr: "$.time.timestamp"
-          _RETURN_: attr are present
+          pattern: ['^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$']
+          _CONTINUE_: "!(fulfillment_type any in var_delivery_type) || !(attr are present)"
+          _RETURN_: attr follow regex pattern
         - _NAME_: FULFILLMENTS_TYPE
           attr: "$.message.order.fulfillments[*].type"
           _RETURN_: attr are present
