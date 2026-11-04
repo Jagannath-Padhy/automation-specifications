@@ -1109,6 +1109,7 @@ steps:
         order_id: $.message.order.id
         tags: $.message.order.tags
         payments: $.message.order.payments
+        billing: $.message.order.billing
       inputs: {}
     examples:
       - name: example for confirm
