@@ -116,8 +116,6 @@ flows:
     usecase: eB2B
     tags:
       - WORKBENCH
-      - MANDATORY
-      - REPORTABLE
     description: An eB2B retailer mapping flow where a buyer platform maps retailer identifiers to provider IDs on a seller platform, then performs a provider-targeted search to retrieve retailer-specific terms including credit limits, POC details, and scheme progress.
     config:
       $ref: ./eB2B/Retailer_Mapping.yaml
