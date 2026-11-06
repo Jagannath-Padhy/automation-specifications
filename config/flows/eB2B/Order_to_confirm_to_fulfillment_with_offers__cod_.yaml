@@ -303,6 +303,7 @@ steps:
                     location_ids:
                       - L1
                     category_ids:
+                      - Energy and Soft Drinks
                     item_ids:
                       - I5
                       - I6
@@ -1362,6 +1363,7 @@ steps:
                       location_ids:
                         - L1
                       category_ids:
+                        - Energy and Soft Drinks
                       item_ids:
                         - I5
                         - I6
